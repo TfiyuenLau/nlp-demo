@@ -1,6 +1,6 @@
 # nlp-demo
 
- 本项目用于学习并手工复现《Deep Learning from Scratch 2》中的经典 NLP 序列建模算法，包含 RNN 语言模型、LSTM 语言模型、Seq2seq（含 Peeky 解码器）、以及 Attention-Seq2seq。实现基于 NumPy 与最小依赖。
+ 本项目用于学习并复现《Deep Learning from Scratch 2》中的经典 NLP 序列建模算法，包含 RNN 语言模型、LSTM 语言模型、Seq2seq（含 Peeky 解码器）、以及 Attention-Seq2seq。实现基于 NumPy 与最小依赖。
 
 - 原项目链接: https://github.com/oreilly-japan/deep-learning-from-scratch-2
 - Python 版本: 3.11（见 `.python-version`、`pyproject.toml`）
@@ -54,12 +54,6 @@
 ## 快速开始
 
  打开根目录下的 `*_main.ipynb` 并按节执行，即可复现实验与图表。
-
-## 结果与可视化
-
-- 词级语言模型：训练曲线和困惑度见 `rnn_perplexity.png`
-- Seq2seq 验证集准确率：`seq2seq_val_acc.png`
-- Attention-Seq2seq 验证集准确率：`attention_seq2seq_val_acc.png`
 
 ## 参考与致谢
 
