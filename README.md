@@ -4,7 +4,7 @@
 
 - 原项目链接: https://github.com/oreilly-japan/deep-learning-from-scratch-2
 - Python 版本: 3.11（见 `.python-version`、`pyproject.toml`）
-- 依赖: `numpy`, `matplotlib`（见 `pyproject.toml`
+- 依赖: `numpy`, `matplotlib`, `ipykernel(dev)`（见 `pyproject.toml`）
 
 ## 项目结构
 
