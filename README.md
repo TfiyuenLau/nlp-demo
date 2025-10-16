@@ -1,6 +1,6 @@
 # nlp-demo
 
- 本项目用于学习并复现《深度学习进阶：自然语言处理》中的经典 NLP 序列建模算法，包含 RNN 语言模型、LSTM 语言模型、Seq2seq（含 Peeky 解码器）、以及 Attention-Seq2seq。实现基于 NumPy 与最小依赖。
+ 本项目用于学习并复现《深度学习进阶：自然语言处理》中的经典 NLP 序列建模算法，包含 RNN 语言模型、LSTM 语言模型、Seq2seq（含 Peeky 解码器）、Attention-Seq2seq 以及 Transformer。实现基于 NumPy 与最小依赖。
 
 - 原项目链接: https://github.com/oreilly-japan/deep-learning-from-scratch-2
 - Python 版本: 3.11（见 `.python-version`、`pyproject.toml`）
@@ -9,12 +9,12 @@
 ## 项目结构
 
 - 代码
-  - `rnn/`、`lstm/`、`seq2seq/`、`attention/`、`common/`、`dataset/`
+  - `rnn/`、`lstm/`、`seq2seq/`、`attention/`、`transformer/`、`common/`、`dataset/`
 - 数据与可视化
   - `dataset/data/`：PTB 文本与字符级任务数据 `addition.txt`、`date.txt`
   - 结果图：`rnn_perplexity.png`、`seq2seq_val_acc.png`、`attention_seq2seq_val_acc.png`
 - Notebook
-  - `rnn_main.ipynb`、`lstm_main.ipynb`、`seq2seq_main.ipynb`、`attention_main.ipynb`
+  - `rnn_main.ipynb`、`lstm_main.ipynb`、`seq2seq_main.ipynb`、`attention_main.ipynb`、`transformer_main.ipynb`
 
 ## 复现范围
 
@@ -30,8 +30,11 @@
 - Attention-Seq2seq
   - 顶层: `attention/attention_seq2seq.py`
   - 子层: `attention/attention_layers.py`（`AttentionWeight`、`WeightSum`、`TimeAttention`）
+- Transformer
+  - 顶层: `transformer/transformer.py`（Transformer 序列到序列模型）
+  - 核心层: `transformer/transformer_layers.py`（多头注意力、前馈网络、编码器/解码器层）
 - 公共模块
-  - `common/layers.py`（`TimeEmbedding`、`TimeAffine`、`TimeSoftmaxWithLoss`、`TimeDropout` 等）
+  - `common/layers.py`（`TimeEmbedding`、`TimeAffine`、`TimeSoftmaxWithLoss`、`TimeDropout`、`LayerNorm`、`PositionalEncoding` 等）
   - `common/optimizer.py`（`SGD`、`Adam`）
   - `common/utils.py`（`Trainer`、`RnnlmTrainer`、梯度裁剪、困惑度评估、Seq2seq 评估等）
   - `common/functions.py`（激活函数、softmax、交叉熵）
